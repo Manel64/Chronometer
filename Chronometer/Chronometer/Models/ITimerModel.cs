@@ -30,6 +30,11 @@ namespace Chronometer.Models
         void Reset();
 
         /// <summary>
+        /// Return the timer interval that we're using.
+        /// </summary>
+        TimeSpan TickIntrvl { get; }
+
+        /// <summary>
         /// Tick event
         /// </summary>
         event EventHandler<TimerModelEventArgs> TickEvent;

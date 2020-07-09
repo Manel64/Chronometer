@@ -3,7 +3,7 @@
 namespace Chronometer.Models
 {
     /// <summary>
-    /// EventArgs class for the timer model.
+    /// EventArgs class for the timer.
     /// </summary>
     public class TimerModelEventArgs : EventArgs
     {
