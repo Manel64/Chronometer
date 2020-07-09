@@ -13,7 +13,7 @@ namespace Chronometer.ViewModels
         private readonly ITimerModel _Chrono = new TimerModel();
         #endregion
 
-        #region Constructors
+        #region Constructor
         /// <summary>
         /// Construct a new timer view model.
         /// </summary>
@@ -45,6 +45,7 @@ namespace Chronometer.ViewModels
             }
         }
         #endregion
+
         #region Text Start Button
         /// <summary>
         /// The content of Start Button
@@ -107,7 +108,6 @@ namespace Chronometer.ViewModels
         #endregion
 
         #region Pause Command
-
         /// <summary>
         /// Stop the underlying timer.
         /// </summary>
@@ -128,7 +128,6 @@ namespace Chronometer.ViewModels
         #endregion
 
         #region Stop Command
-
         /// <summary>
         /// Stop the underlying timer.
         /// </summary>
@@ -150,14 +149,14 @@ namespace Chronometer.ViewModels
         #endregion
 
         #region Reset Command
-
         /// <summary>
         /// Reset the timer and update corresponding values.
+        /// Not Used 
         /// </summary>
         private void ResetTimerExecute()
         {
             _Chrono.Reset();
-            UpdateTimerValues();
+            UpdtTimerValues();
         }
         #endregion
 
@@ -168,19 +167,18 @@ namespace Chronometer.ViewModels
         /// Update the timer view model.
         /// </summary>
         /// <param name="t"></param>
-        private void UpdateTimer(TimerModelEventArgs e)
+        private void UpdtTimer(TimerModelEventArgs e)
         {
-            UpdateTimerValues();
+            UpdtTimerValues();
         }
         /// <summary>
         /// Update the timer view model.
         /// </summary>
         /// <param name="t"></param>
-        private void UpdateTimerValues()
+        private void UpdtTimerValues()
         {
             TimeSpan t = _Chrono.Chrono;
-            TimerValue = string.Format("{0}:{1}:{2}", t.Hours.ToString("D2"),
-                t.Minutes.ToString("D2"), t.Seconds.ToString("D2"));
+            TimerValue = t.ToString();
         }
 
         /// <summary>
@@ -203,7 +201,7 @@ namespace Chronometer.ViewModels
         /// <param name="e"></param>
         private void OnTick(object sender, TimerModelEventArgs e)
         {
-            UpdateTimer(e);
+            UpdtTimer(e);
         }
 
         /// <summary>
@@ -213,7 +211,7 @@ namespace Chronometer.ViewModels
         /// <param name="e"></param>
         private void OnStarted(object sender, TimerModelEventArgs e)
         {
-            UpdateTimer(e);
+            UpdtTimer(e);
             SystemSounds.Beep.Play();
         }
 
@@ -224,7 +222,7 @@ namespace Chronometer.ViewModels
         /// <param name="e"></param>
         private void OnPaused(object sender, TimerModelEventArgs e)
         {
-            UpdateTimer(e);
+            UpdtTimer(e);
             SystemSounds.Beep.Play();
         }
 
@@ -235,7 +233,7 @@ namespace Chronometer.ViewModels
         /// <param name="e"></param>
         private void OnStopped(object sender, TimerModelEventArgs e)
         {
-            UpdateTimer(e);
+            UpdtTimer(e);
             SystemSounds.Beep.Play();
         }
 
@@ -246,7 +244,7 @@ namespace Chronometer.ViewModels
         /// <param name="e"></param>
         private void OnReset(object sender, TimerModelEventArgs e)
         {
-            UpdateTimer(e);
+            UpdtTimer(e);
             SystemSounds.Beep.Play();
         }
         #endregion

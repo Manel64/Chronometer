@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Chronometer"
         xmlns:tv="clr-namespace:Chronometer.Views.UsersControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Chronometer" Height="250" Width="495">
     <Grid>
         <tv:TimerView/>        
     </Grid>

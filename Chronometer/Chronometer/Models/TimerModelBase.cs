@@ -43,7 +43,6 @@ namespace Chronometer.Models
         #endregion
 
         #region Methods
-
         /// <summary>
         /// Start the Chronometer.
         /// </summary>
