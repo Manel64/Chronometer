@@ -72,6 +72,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\ITimerModel.cs" />
+    <Compile Include="Models\TimerModelEventArgs.cs" />
+    <Compile Include="Models\TimerState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -98,7 +101,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Views\" />
   </ItemGroup>
