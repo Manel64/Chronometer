@@ -35,6 +35,11 @@ namespace Chronometer.Models
         TimeSpan TickIntrvl { get; }
 
         /// <summary>
+        /// The state 
+        /// </summary>
+        TimerState Status { get; set; }
+
+        /// <summary>
         /// Tick event
         /// </summary>
         event EventHandler<TimerModelEventArgs> TickEvent;

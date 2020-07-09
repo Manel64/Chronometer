@@ -17,7 +17,7 @@ namespace Chronometer.Models
         /// <summary>
         /// Create a timer into Ctor
         /// </summary>
-        public TimerModel()
+        public TimerModelBase()
         {
             _chrono.Interval = TimeSpan.FromSeconds(1);
             _chrono.Tick += (sender, e) => OnDispatcherTimerTick();
@@ -67,7 +67,6 @@ namespace Chronometer.Models
         /// </summary>
         public void Stop()
         {
-            Reset();
             _chrono.Stop();
             OnStopped();
         }
